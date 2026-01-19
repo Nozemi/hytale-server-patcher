@@ -22,6 +22,15 @@ dependencies {
     implementation("org.ow2.asm:asm-commons:9.5")
 }
 
+tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from(sourceSets.main.get().output)
+    dependsOn(configurations.runtimeClasspath)
+    from({
+        configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) }
+    })
+}
+
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(25))

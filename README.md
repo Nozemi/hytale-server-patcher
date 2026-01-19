@@ -5,3 +5,10 @@ To use this; simply clone the project and build the JAR, then put it inside the 
 
 ## Current Features
 - Removes the `Player has left world` message entirely.
+
+## Credits
+- [Bootstrap/Early Plugins - Hytale Modding Documentation (britakee-studios.gitbook.io)][bootstrap-earlyplugins-docs]
+  - Provided just enough information on what an early plugin actually is, and general idea of how to implement one.
+
+
+[bootstrap-earlyplugins-docs]: https://britakee-studios.gitbook.io/hytale-modding-documentation/plugins-java-development/09-bootstrap-early-plugins
